@@ -1,5 +1,8 @@
+module.exports = (config) => {
 
-module.exports = function(config) {
+  // copy static assets to the output folder
+  config.addPassthroughCopy("img");
+  config.addPassthroughCopy("css");
 
   // returns all posts
   config.addCollection('post', collection => {
@@ -11,7 +14,4 @@ module.exports = function(config) {
     const arr = collection.getFilteredByGlob('posts/*.md')
     return arr.slice(Math.max(arr.length - 5, 0))  
   });
-
-  config.addPassthroughCopy("img");
-  config.addPassthroughCopy("css");
 };
