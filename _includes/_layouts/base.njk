@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Harish Mathanan">
+  <meta name="description" content="{{ description or 'Harish Mathanan Blog' }}">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/css/hm-dark.css' | url }}" />
+  <link rel="stylesheet" href="{{ '/css/prism-vsc-dark-plus.css' | url }}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Slabo+13px" />
+  
+  <title>{{ title or 'Harish Mathanan' }}</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-link"><a href="/">Home</a></li>
+          <li class="navigation-link"><a href="/archive">Archive</a></li>
+          <li class="navigation-link"><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      {{ content | safe }}
+    </div>
+  </main>
+</body>
+</html>
